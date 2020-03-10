@@ -119,7 +119,9 @@ const hasStore = ({ store }) => store && store._vm
 const forEachValue = (obj, fn) =>
   Object.keys(obj).forEach(key => fn(obj[key], key))
 
-const resetStoreVM = (Vue, { store }) => {
+const resetStoreVM = (Vue, { store }) => isVuex3Store(store) ? resetVuex3StoreVm(store) : resetVuex1StoreVm(store)
+
+const resetVuex3StoreVm = (store) => {
   // bind store public getters
   store.getters = {}
   const wrappedGetters = store._wrappedGetters
@@ -140,8 +142,20 @@ const resetStoreVM = (Vue, { store }) => {
     },
     computed
   })
+
   return store
 }
+
+const resetVuex1StoreVm = (store) => {
+  store._vm = new Vue({
+    data: {
+      state: store._vm._data.state
+    }
+  })
+  return store
+}
+
+const isVuex3Store = store => '_wrappedGetters' in store && '_watcherVM' in store
 
 function setXMLHttpRequest (w) {
   // by grabbing the XMLHttpRequest from app's iframe
