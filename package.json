@@ -1,9 +1,9 @@
 {
-  "name": "cypress-vue-unit-test",
+  "name": "@prepair/cypress-vue-unit-test",
   "description": "A little helper to unit test Vue components in the Cypress.io E2E test runner",
   "version": "1.11.7",
   "author": "Gleb Bahmutov <gleb.bahmutov@gmail.com>",
-  "bugs": "https://github.com/bahmutov/cypress-vue-unit-test/issues",
+  "bugs": "https://github.com/prepair/cypress-vue-unit-test/issues",
   "config": {
     "pre-git": {
       "commit-msg": "simple",
@@ -32,7 +32,7 @@
     "preprocessor/*.js",
     "!src/*-spec.js"
   ],
-  "homepage": "https://github.com/bahmutov/cypress-vue-unit-test#readme",
+  "homepage": "https://github.com/prepair/cypress-vue-unit-test#readme",
   "keywords": [
     "cypress",
     "vue"
@@ -45,7 +45,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/bahmutov/cypress-vue-unit-test.git"
+    "url": "https://github.com/prepair/cypress-vue-unit-test.git"
   },
   "scripts": {
     "ban": "ban",
