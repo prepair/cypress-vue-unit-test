@@ -1,7 +1,7 @@
 {
   "name": "cypress-vue-unit-test",
   "description": "A little helper to unit test Vue components in the Cypress.io E2E test runner",
-  "version": "0.0.0-development",
+  "version": "1.11.7",
   "author": "Gleb Bahmutov <gleb.bahmutov@gmail.com>",
   "bugs": "https://github.com/bahmutov/cypress-vue-unit-test/issues",
   "config": {
