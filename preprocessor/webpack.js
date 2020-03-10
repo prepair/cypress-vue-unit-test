@@ -5,7 +5,10 @@ const webpackPreprocessor = require('@cypress/webpack-preprocessor')
 // default Cypress webpack options - good for basic projects
 const webpackOptions = {
   resolve: {
-    extensions: ['.js', '.json', '.vue']
+    extensions: ['.js', '.json', '.vue'],
+    alias: {
+      vue$: 'vue/dist/vue.esm.js'
+    }
   },
   module: {
     rules: [

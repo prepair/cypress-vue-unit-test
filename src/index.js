@@ -1,6 +1,7 @@
 /// <reference types="cypress" />
 
-const Vue = require('vue/dist/vue')
+const Vue = require('vue').default
+
 const { stripIndent } = require('common-tags')
 
 // mountVue options
